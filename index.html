@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Web Studio | تصميم مواقع ومتاجر إلكترونية احترافية</title>
+    <title>K-Web Studio | تصميم وتطوير مواقع ومتاجر إلكترونية</title>
+    
+    <!-- Meta SEO & Social Sharing (WhatsApp / Facebook) -->
+    <meta name="description" content="K-Web Studio — استوديو متخصص في تصميم مواقع ومتاجر إلكترونية سريعة للأنشطة التجارية في مصر، بربط مباشر مع واتساب وGoogle Sheets وبدون أي اشتراكات شهرية.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="K-Web Studio | مواقع ومتاجر إلكترونية بدون اشتراكات شهرية">
+    <meta property="og:description" content="صمّم موقع أو متجر احترافي لشغلك بربط مباشر مع واتساب وتخزين في Google Sheets وبدون أي تكاليف شهرية. تصفح نماذجنا التجريبية الحية.">
+    <meta property="og:url" content="https://kerols93.github.io/k-web-studio/">
+    <meta property="og:image" content="https://kerols93.github.io/k-web-studio/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="K-Web Studio | مواقع ومتاجر إلكترونية في مصر">
+    <meta name="twitter:description" content="صمّم موقع أو متجر احترافي لشغلك بربط مباشر مع واتساب وتخزين في Google Sheets وبدون أي تكاليف شهرية.">
+    <meta name="twitter:image" content="https://kerols93.github.io/k-web-studio/og-cover.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --navy: #0B1120;
@@ -73,21 +91,23 @@
             direction: ltr;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .brand-title span { color: #3B82F6; }
 
-        .verified-badge {
+        .experience-pill {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            background: var(--blue);
-            color: #fff;
-            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.18);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #93C5FD;
+            font-family: 'Alexandria', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            direction: rtl;
         }
 
         .brand-tagline {
@@ -245,7 +265,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
-            margin-bottom: 36px;
+            margin-bottom: 18px;
         }
 
         .pkg-card {
@@ -274,14 +294,27 @@
             font-weight: 700;
         }
 
+        .pkg-price-wrap {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
         .pkg-price {
-            font-size: 1.55rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: var(--white);
         }
 
-        .pkg-price small {
-            font-size: 0.76rem;
+        .pkg-old-price {
+            font-size: 0.95rem;
+            color: #64748B;
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+
+        .pkg-price-wrap small {
+            font-size: 0.74rem;
             color: var(--slate);
             font-weight: 500;
         }
@@ -290,9 +323,27 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 7px;
+            gap: 8px;
             font-size: 0.8rem;
             color: var(--slate-light);
+        }
+
+        /* Conditions / Inclusions Card */
+        .terms-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px dashed var(--navy-border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 36px;
+            font-size: 0.78rem;
+            color: var(--slate-light);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .terms-card strong {
+            color: var(--white);
         }
 
         /* Quick Request Box */
@@ -376,7 +427,7 @@
 
             <div class="brand-title">
                 K<span>-</span>WEB STUDIO
-                <span class="verified-badge" title="موثّق">✓</span>
+                <span class="experience-pill">+3 نماذج تجريبية</span>
             </div>
 
             <p class="brand-tagline">
@@ -384,7 +435,7 @@
             </p>
 
             <div class="trust-pills">
-                <span class="trust-pill">⚡ تسليم خلال 48 ساعة</span>
+                <span class="trust-pill">⚡ تسليم سريع (2 - 4 أيام)</span>
                 <span class="trust-pill">📊 ربط Google Sheets</span>
                 <span class="trust-pill">💳 دفعة واحدة فقط</span>
             </div>
@@ -392,7 +443,7 @@
 
         <!-- أزرار الإجراء السريع -->
         <div class="cta-row">
-            <a href="https://wa.me/201011695927?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20K-Web%20Studio%D8%8C%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A" target="_blank" class="btn btn-whatsapp">
+            <a href="https://wa.me/201011695927?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20K-Web%20Studio%D8%8C%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                 💬 تواصل واتساب فوراً
             </a>
             <a href="#order-section" class="btn btn-blue">
@@ -400,50 +451,50 @@
             </a>
         </div>
 
-        <!-- النماذج الحية -->
+        <!-- النماذج التجريبية الحية -->
         <div class="sec-label">
-            <span>نماذج حية من شغلنا (جرّبها بنفسك)</span>
+            <span>أمثلة ونماذج تجريبية (جرّبها بنفسك)</span>
             <span>LIVE DEMOS</span>
         </div>
 
         <section class="demos-list">
-            <a href="https://kerols93.github.io/men-store/" target="_blank" class="demo-card">
+            <a href="https://kerols93.github.io/men-store/" target="_blank" rel="noopener noreferrer" class="demo-card">
                 <div class="demo-left">
                     <div class="demo-icon fashion">👔</div>
                     <div class="demo-info">
                         <h3>MAN Store — متجر أزياء وبراندات</h3>
-                        <p>عرض المنتجات والمقاسات، سلة مشتريات، كوبونات خصم، ربط واتساب وإكسل</p>
+                        <p>عرض المنتجات والمقاسات، سلة مشتريات، كوبونات خصم، وربط واتساب و Google Sheets</p>
                     </div>
                 </div>
-                <span class="demo-arrow">معاينة حية ↗</span>
+                <span class="demo-arrow">معاينة تجريبية ↗</span>
             </a>
 
-            <a href="https://kerols93.github.io/food-burger/" target="_blank" class="demo-card">
+            <a href="https://kerols93.github.io/food-burger/" target="_blank" rel="noopener noreferrer" class="demo-card">
                 <div class="demo-left">
                     <div class="demo-icon burger">🍔</div>
                     <div class="demo-info">
                         <h3>FOOD BURGER — منيو وطلبات مطاعم</h3>
-                        <p>منيو تفاعلي بدون عمولات توصيل، اختيار ساندوتش/كومبو، دليفري أو تيك أواي</p>
+                        <p>منيو تفاعلي بدون عمولات توصيل، اختيار ساندوتش/كومبو، وربط الطلب بواتساب و Google Sheets</p>
                     </div>
                 </div>
-                <span class="demo-arrow">معاينة حية ↗</span>
+                <span class="demo-arrow">معاينة تجريبية ↗</span>
             </a>
 
-            <a href="https://kerols93.github.io/physio-care/" target="_blank" class="demo-card">
+            <a href="https://kerols93.github.io/physio-care/" target="_blank" rel="noopener noreferrer" class="demo-card">
                 <div class="demo-left">
                     <div class="demo-icon clinic">🩺</div>
                     <div class="demo-info">
                         <h3>PHYSIO CARE — مركز علاج طبيعي وعيادات</h3>
-                        <p>دليل ألم تفاعلي، حجز مواعيد بالساعة واليوم، باقات جلسات وزيارات منزلية</p>
+                        <p>دليل أعراض تفاعلي، حجز مواعيد بالساعة واليوم، وجاهز للربط بـ Google Sheets الخاصة بك</p>
                     </div>
                 </div>
-                <span class="demo-arrow">معاينة حية ↗</span>
+                <span class="demo-arrow">معاينة تجريبية ↗</span>
             </a>
         </section>
 
         <!-- الباقات والأسعار -->
         <div class="sec-label">
-            <span>عروض الإطلاق (لفترة محدودة)</span>
+            <span>أسعار انطلاق الاستوديو (لفترة محدودة)</span>
             <span>PRICING</span>
         </div>
 
@@ -451,46 +502,60 @@
             <div class="pkg-card popular">
                 <span class="pkg-tag">الأكثر طلباً للمتاجر والمطاعم</span>
                 <h3>باقة المتجر أو المنيو التفاعلي</h3>
-                <div class="pkg-price">600 ج.م <small>/ مرة واحدة</small></div>
+                <div class="pkg-price-wrap">
+                    <span class="pkg-price">1,000 ج.م</span>
+                    <span class="pkg-old-price">1,500 ج.م</span>
+                    <small>/ مرة واحدة</small>
+                </div>
                 <ul class="pkg-list">
                     <li>✓ تصميم كامل باسم وهوية مشروعك</li>
-                    <li>✓ سلة طلبات + كوبونات خصم حقيقية</li>
+                    <li>✓ سلة طلبات + نظام كوبونات خصم</li>
                     <li>✓ استقبال الأوردرات على واتساب + Google Sheets</li>
-                    <li>✓ متوافق 100% مع الموبايل واستضافة مجانية</li>
+                    <li>✓ متوافق 100% مع الموبايل واستضافة سحابية سريعة</li>
                 </ul>
             </div>
 
             <div class="pkg-card">
-                <span class="pkg-tag">للعيادات والمراكز الطبية</span>
+                <span class="pkg-tag">للعيادات والمراكز الطبية والخدمات</span>
                 <h3>باقة العيادات وحجز المواعيد</h3>
-                <div class="pkg-price">750 ج.م <small>/ مرة واحدة</small></div>
+                <div class="pkg-price-wrap">
+                    <span class="pkg-price">1,500 ج.م</span>
+                    <span class="pkg-old-price">2,200 ج.م</span>
+                    <small>/ مرة واحدة</small>
+                </div>
                 <ul class="pkg-list">
                     <li>✓ تصميم طبي راقي مخصص لتخصص العيادة</li>
-                    <li>✓ نظام حجز مواعيد باليوم والساعة</li>
-                    <li>✓ تسجيل تلقائي لكل الحجوزات في Google Sheets</li>
-                    <li>✓ تعديل الخدمات والأسعار بسهولة تامة</li>
+                    <li>✓ نظام حجز مواعيد تفاعلي باليوم والساعة</li>
+                    <li>✓ ربط الحجوزات بـ Google Sheets وواتساب العيادة</li>
+                    <li>✓ سهولة تعديل الخدمات والأسعار وقائمة الأطباء</li>
                 </ul>
             </div>
         </section>
 
+        <!-- شروط وضمانات الشفافية -->
+        <div class="terms-card">
+            <div><strong>🛡️ ما هو متضمن:</strong> استضافة مجانية مدى الحياة على GitHub Pages بدون اشتراك شهري + تعديل واحد مجاني شامل بعد التسليم.</div>
+            <div><strong>ℹ️ الدومين الخاص:</strong> الدومين (.com أو .eg) اختياري تماماً بحسب رغبتك (تكلفته الرسمية حوالي 500 - 600 ج.م سنوياً تدفعها لشركة النطاقات ونربطه مجاناً).</div>
+        </div>
+
         <!-- نموذج طلب سريع -->
         <section id="order-section" class="request-box">
-            <h2>ابدأ موقع مشروعك خلال 48 ساعة ⚡</h2>
-            <p>اختار نوع مشروعك واكتب اسمه، وهيفتحلك واتساب برسالة جاهزة عشان نبعتلك التفاصيل.</p>
+            <h2>ابدأ موقع مشروعك الآن ⚡</h2>
+            <p>اكتب اسم مشروعك ونشاطه، وهيفتحلك واتساب برسالة منظمة نجهزلك بيها المعاينة والتفاصيل.</p>
             <form class="form-stack" id="quick-lead-form">
                 <input type="text" id="biz-name" class="field" required placeholder="اسم مشروعك / البراند / المطعم / العيادة">
                 <select id="biz-type" class="field" required>
-                    <option value="متجر ملابس / براند أونلاين">متجر ملابس / براند أونلاين (600 ج.م)</option>
-                    <option value="مطعم / كافيه (منيو وطلبات)">مطعم / كافيه — منيو تفاعلي (600 ج.م)</option>
-                    <option value="عيادة / مركز علاج طبيعي">عيادة / مركز طبي — حجز مواعيد (750 ج.م)</option>
+                    <option value="متجر ملابس / براند أونلاين">متجر ملابس / براند أونلاين (1,000 ج.م)</option>
+                    <option value="مطعم / كافيه (منيو وطلبات)">مطعم / كافيه — منيو تفاعلي (1,000 ج.م)</option>
+                    <option value="عيادة / مركز علاج طبيعي">عيادة / مركز طبي — حجز مواعيد (1,500 ج.م)</option>
                     <option value="موقع تعريفي لنشاط آخر">موقع تعريفي لنشاط آخر</option>
                 </select>
-                <button type="submit" class="btn btn-blue">إرسال الطلب عبر واتساب 🚀</button>
+                <button type="submit" class="btn btn-blue">طلب معاينة مجانية عبر واتساب 🚀</button>
             </form>
         </section>
 
         <footer class="footer-note">
-            © 2026 K-Web Studio — حلول الويب الذكية للمشاريع في مصر
+            © 2026 K-Web Studio — استوديو تصميم وتطوير المواقع الذكية في مصر
         </footer>
     </div>
 
@@ -500,12 +565,12 @@
             const bizName = document.getElementById("biz-name").value.trim();
             const bizType = document.getElementById("biz-type").value;
             const msg =
-`السلام عليكم K-Web Studio، مهتم أعمل موقع لمشروعي:
+`السلام عليكم K-Web Studio، حابب أطلب معاينة لمشروعي:
 ━━━━━━━━━━━━━━━━━━━━
 🏢 *اسم المشروع:* ${bizName}
-📌 *نوع الموقع:* ${bizType}
+📌 *نوع الموقع المطلوب:* ${bizType}
 ━━━━━━━━━━━━━━━━━━━━
-ممكن تفاصيل البداية والتنفيذ؟`;
+ممكن نجهز المعاينة ونعرف خطوات البداية؟`;
             window.open("https://wa.me/201011695927?text=" + encodeURIComponent(msg), "_blank");
         });
     </script>
