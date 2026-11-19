@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Web Studio | تصميم وتطوير مواقع ومتاجر إلكترونية</title>
+    <title>K-Web Studio | استوديو تصميم وتطوير المواقع والمتاجر الذكية</title>
     
     <!-- Meta SEO & Social Sharing (WhatsApp / Facebook) -->
     <meta name="description" content="K-Web Studio — استوديو متخصص في تصميم مواقع ومتاجر إلكترونية سريعة للأنشطة التجارية في مصر، بربط مباشر مع واتساب وGoogle Sheets وبدون أي اشتراكات شهرية.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="K-Web Studio | مواقع ومتاجر إلكترونية بدون اشتراكات شهرية">
-    <meta property="og:description" content="صمّم موقع أو متجر احترافي لشغلك بربط مباشر مع واتساب وتخزين في Google Sheets وبدون أي تكاليف شهرية. تصفح نماذجنا التجريبية الحية.">
+    <meta property="og:description" content="حوّل متابعين صفحتك لمبيعات وأوردرات مباشرة على واتساب وGoogle Sheets بدون عمولات منصات أو اشتراكات شهرية. تصفح نماذجنا التجريبية الحية.">
     <meta property="og:url" content="https://kerols93.github.io/k-web-studio/">
     <meta property="og:image" content="https://kerols93.github.io/k-web-studio/og-cover.jpg">
     <meta name="twitter:card" content="summary_large_image">
@@ -23,21 +23,25 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --navy: #0B1120;
-            --navy-card: #111827;
+            --navy: #070B14;
+            --navy-card: #0F172A;
             --navy-border: #1E293B;
+            --navy-hover: #172554;
             --blue: #2563EB;
             --blue-hover: #1D4ED8;
             --blue-light: #60A5FA;
+            --cyan: #38BDF8;
             --white: #FFFFFF;
             --slate: #94A3B8;
             --slate-light: #CBD5E1;
             --green: #25D366;
-            --radius: 16px;
+            --amber: #F59E0B;
+            --purple: #8B5CF6;
+            --radius: 18px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -49,89 +53,139 @@
             line-height: 1.65;
             min-height: 100vh;
             background-image:
-                linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px),
-                radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.2) 0%, transparent 45%);
-            background-size: 56px 56px, 56px 56px, 100% 100%;
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px),
+                radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.22) 0%, transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(139, 92, 246, 0.12) 0%, transparent 45%);
+            background-size: 56px 56px, 56px 56px, 100% 100%, 100% 100%;
             -webkit-font-smoothing: antialiased;
         }
 
         a { color: inherit; text-decoration: none; }
 
         .wrapper {
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 36px 20px 64px;
+            padding: 38px 20px 72px;
         }
 
-        /* Header / Brand Identity */
-        .profile-head {
+        /* ==================== HERO SECTION (دخلة قوية وخاطفة) ==================== */
+        .hero-banner {
             text-align: center;
-            margin-bottom: 34px;
+            margin-bottom: 38px;
+            position: relative;
         }
 
-        .logo-badge {
-            width: 84px;
-            height: 84px;
-            margin: 0 auto 18px;
-            border-radius: 22px;
-            background: #0F172A;
-            border: 1px solid rgba(59, 130, 246, 0.4);
+        .hero-top-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.15);
+            border: 1.5px solid rgba(59, 130, 246, 0.4);
+            color: #93C5FD;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .logo-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .logo-badge {
+            width: 76px;
+            height: 76px;
+            border-radius: 22px;
+            background: #0F172A;
+            border: 1.5px solid rgba(59, 130, 246, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
         }
 
         .brand-title {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.85rem;
-            font-weight: 800;
+            font-size: 2rem;
+            font-weight: 900;
             letter-spacing: 1.5px;
             direction: ltr;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            text-align: right;
+            line-height: 1.15;
         }
-
         .brand-title span { color: #3B82F6; }
 
         .experience-pill {
-            display: inline-flex;
-            align-items: center;
+            display: inline-block;
             padding: 3px 10px;
             border-radius: 999px;
-            background: rgba(37, 99, 235, 0.18);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            color: #93C5FD;
+            background: rgba(37, 99, 235, 0.2);
+            border: 1px solid rgba(96, 165, 250, 0.45);
+            color: #BFDBFE;
             font-family: 'Alexandria', sans-serif;
             font-size: 0.72rem;
             font-weight: 700;
             direction: rtl;
+            margin-top: 4px;
+        }
+
+        .hero-headline {
+            font-size: 1.75rem;
+            font-weight: 900;
+            line-height: 1.35;
+            color: var(--white);
+            margin: 18px auto 14px;
+            max-width: 620px;
+        }
+
+        .hero-headline .gradient-text {
+            background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #A78BFA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .brand-tagline {
             color: var(--slate-light);
-            font-size: 0.98rem;
-            margin: 10px auto 18px;
-            max-width: 500px;
+            font-size: 0.96rem;
+            margin: 0 auto 24px;
+            max-width: 560px;
+            line-height: 1.6;
         }
 
-        .trust-pills {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
+        /* Metric Highlights (إحصائيات الثقة) */
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 24px;
         }
 
-        .trust-pill {
-            font-size: 0.78rem;
+        .metric-card {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid var(--navy-border);
+            border-radius: 14px;
+            padding: 12px 8px;
+            text-align: center;
+        }
+        .metric-num {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #60A5FA;
+            line-height: 1.2;
+        }
+        .metric-lbl {
+            font-size: 0.72rem;
+            color: var(--slate);
             font-weight: 600;
-            color: #BFDBFE;
-            background: rgba(37, 99, 235, 0.14);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            padding: 5px 13px;
-            border-radius: 999px;
+            margin-top: 3px;
         }
 
         /* Primary Quick Action Buttons */
@@ -139,7 +193,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin-bottom: 34px;
+            margin-bottom: 38px;
         }
 
         .btn {
@@ -147,20 +201,20 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 14px 18px;
-            border-radius: 12px;
+            padding: 15px 18px;
+            border-radius: 14px;
             font-family: inherit;
-            font-size: 0.92rem;
-            font-weight: 700;
+            font-size: 0.94rem;
+            font-weight: 800;
             cursor: pointer;
             border: none;
-            transition: all 0.2s ease;
+            transition: all 0.22s ease;
         }
 
         .btn-blue {
             background: var(--blue);
             color: var(--white);
-            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.32);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
         }
         .btn-blue:hover {
             background: var(--blue-hover);
@@ -174,18 +228,18 @@
             box-shadow: 0 8px 24px rgba(37, 211, 102, 0.22);
         }
         .btn-whatsapp:hover {
-            filter: brightness(1.06);
+            filter: brightness(1.08);
             transform: translateY(-2px);
         }
 
         /* Section Titles */
         .sec-label {
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.8px;
             color: var(--blue-light);
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -196,7 +250,7 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
-            margin-bottom: 36px;
+            margin-bottom: 42px;
         }
 
         .demo-card {
@@ -213,9 +267,9 @@
 
         .demo-card:hover {
             border-color: var(--blue);
-            background: #151F32;
+            background: #131E36;
             transform: translateY(-2px);
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
         }
 
         .demo-left {
@@ -260,63 +314,86 @@
             white-space: nowrap;
         }
 
-        /* Packages */
+        /* ==================== CORE PACKAGES ==================== */
         .packages-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin-bottom: 18px;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
         }
 
         .pkg-card {
             background: var(--navy-card);
             border: 1px solid var(--navy-border);
             border-radius: var(--radius);
-            padding: 22px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
+            position: relative;
+            transition: all 0.22s ease;
         }
 
-        .pkg-card.popular {
-            border-color: var(--blue);
-            background: linear-gradient(180deg, rgba(37, 99, 235, 0.12) 0%, var(--navy-card) 100%);
+        .pkg-card:hover {
+            border-color: rgba(96, 165, 250, 0.45);
         }
 
-        .pkg-tag {
+        .pkg-card.featured {
+            border: 2px solid var(--blue);
+            background: linear-gradient(180deg, rgba(37, 99, 235, 0.16) 0%, var(--navy-card) 100%);
+            box-shadow: 0 16px 40px rgba(37, 99, 235, 0.2);
+        }
+
+        .pkg-badge {
+            position: absolute;
+            top: 18px;
+            left: 20px;
             font-size: 0.72rem;
-            font-weight: 700;
-            color: var(--blue-light);
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+        .pkg-badge.blue { background: rgba(37, 99, 235, 0.25); border: 1px solid #60A5FA; color: #93C5FD; }
+        .pkg-badge.green { background: rgba(34, 197, 94, 0.2); border: 1px solid #4ADE80; color: #86EFAC; }
+        .pkg-badge.purple { background: rgba(139, 92, 246, 0.25); border: 1px solid #A78BFA; color: #C4B5FD; }
+
+        .pkg-header h3 {
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 4px;
         }
 
-        .pkg-card h3 {
-            font-size: 1rem;
-            font-weight: 700;
+        .pkg-desc {
+            font-size: 0.82rem;
+            color: var(--slate);
         }
 
         .pkg-price-wrap {
             display: flex;
             align-items: baseline;
-            gap: 8px;
+            gap: 10px;
+            padding: 10px 0 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .pkg-price {
-            font-size: 1.6rem;
-            font-weight: 800;
+            font-size: 1.75rem;
+            font-weight: 900;
             color: var(--white);
         }
 
         .pkg-old-price {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #64748B;
             text-decoration: line-through;
             font-weight: 600;
         }
 
         .pkg-price-wrap small {
-            font-size: 0.74rem;
-            color: var(--slate);
-            font-weight: 500;
+            font-size: 0.78rem;
+            color: var(--slate-light);
+            font-weight: 600;
         }
 
         .pkg-list {
@@ -324,8 +401,118 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            font-size: 0.8rem;
+            font-size: 0.84rem;
             color: var(--slate-light);
+        }
+
+        .pkg-list li span.check {
+            color: #38BDF8;
+            font-weight: 800;
+            margin-left: 6px;
+        }
+
+        /* ==================== SEASONAL & BRAND PACKAGES ==================== */
+        .season-box {
+            background: linear-gradient(145deg, #10162B 0%, #0F172A 100%);
+            border: 1.5px solid rgba(139, 92, 246, 0.35);
+            border-radius: var(--radius);
+            padding: 26px;
+            margin-bottom: 24px;
+            position: relative;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+        }
+
+        .season-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .season-header h2 {
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: #E2E8F0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .season-header .vip-tag {
+            background: linear-gradient(90deg, #8B5CF6, #3B82F6);
+            color: #FFF;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 999px;
+            letter-spacing: 0.5px;
+        }
+
+        .season-intro {
+            font-size: 0.85rem;
+            color: var(--slate-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .season-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .season-card {
+            background: rgba(7, 11, 20, 0.75);
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            border-radius: 14px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .season-card.vip {
+            border-color: rgba(245, 158, 11, 0.45);
+            background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(7, 11, 20, 0.85) 100%);
+        }
+
+        .season-card h4 {
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .season-price {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #F8FAFC;
+        }
+        .season-price small {
+            font-size: 0.75rem;
+            color: var(--slate);
+            font-weight: 600;
+        }
+
+        .season-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.78rem;
+            color: var(--slate-light);
+        }
+
+        .vip-perk {
+            background: rgba(245, 158, 11, 0.14);
+            border: 1px dashed rgba(245, 158, 11, 0.5);
+            border-radius: 10px;
+            padding: 8px 10px;
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: #FDE68A;
+            margin-top: 4px;
         }
 
         /* Conditions / Inclusions Card */
@@ -333,13 +520,14 @@
             background: rgba(15, 23, 42, 0.6);
             border: 1px dashed var(--navy-border);
             border-radius: var(--radius);
-            padding: 16px 20px;
-            margin-bottom: 36px;
-            font-size: 0.78rem;
+            padding: 18px 22px;
+            margin-bottom: 38px;
+            font-size: 0.82rem;
             color: var(--slate-light);
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
+            line-height: 1.6;
         }
 
         .terms-card strong {
@@ -351,36 +539,36 @@
             background: var(--navy-card);
             border: 1px solid var(--navy-border);
             border-radius: var(--radius);
-            padding: 26px;
-            margin-bottom: 32px;
+            padding: 28px;
+            margin-bottom: 34px;
         }
 
         .request-box h2 {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-weight: 800;
             margin-bottom: 6px;
         }
 
         .request-box p {
-            font-size: 0.85rem;
+            font-size: 0.86rem;
             color: var(--slate);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .form-stack {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 13px;
         }
 
         .field {
             background: var(--navy);
             border: 1px solid var(--navy-border);
-            border-radius: 10px;
-            padding: 13px 15px;
+            border-radius: 12px;
+            padding: 14px 16px;
             color: var(--white);
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             outline: none;
             width: 100%;
         }
@@ -392,15 +580,21 @@
         .footer-note {
             text-align: center;
             color: var(--slate);
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             border-top: 1px solid var(--navy-border);
-            padding-top: 22px;
+            padding-top: 24px;
         }
 
-        @media (max-width: 560px) {
+        @media (max-width: 580px) {
             .cta-row,
-            .packages-grid {
+            .season-grid {
                 grid-template-columns: 1fr;
+            }
+            .hero-headline {
+                font-size: 1.45rem;
+            }
+            .brand-title {
+                font-size: 1.65rem;
             }
             .demo-card {
                 flex-direction: column;
@@ -414,30 +608,49 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- الهوية والتعريف -->
-        <header class="profile-head">
-            <div class="logo-badge">
-                <svg viewBox="0 0 360 360" width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="44" y="34" width="66" height="292" rx="14" fill="#FFFFFF"/>
-                    <path d="M134 180L264 34H336L204 180H134Z" fill="#2563EB"/>
-                    <path d="M134 180H208L336 326H258L134 192V180Z" fill="#FFFFFF"/>
-                    <rect x="134" y="164" width="32" height="32" rx="6" fill="#3B82F6"/>
-                </svg>
+        
+        <!-- ==================== HERO SECTION ==================== -->
+        <header class="hero-banner">
+            <div class="hero-top-badge">
+                ⚡ طوّر بيزنسك وعلي مبيعاتك في مصر 🇪🇬
             </div>
 
-            <div class="brand-title">
-                K<span>-</span>WEB STUDIO
-                <span class="experience-pill">+3 نماذج تجريبية</span>
+            <div class="logo-wrap">
+                <div class="logo-badge">
+                    <svg viewBox="0 0 360 360" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="44" y="34" width="66" height="292" rx="14" fill="#FFFFFF"/>
+                        <path d="M134 180L264 34H336L204 180H134Z" fill="#2563EB"/>
+                        <path d="M134 180H208L336 326H258L134 192V180Z" fill="#FFFFFF"/>
+                        <rect x="134" y="164" width="32" height="32" rx="6" fill="#3B82F6"/>
+                    </svg>
+                </div>
+                <div class="brand-title">
+                    K<span>-</span>WEB STUDIO
+                    <br><span class="experience-pill">+3 نماذج تجريبية لايف</span>
+                </div>
             </div>
+
+            <h1 class="hero-headline">
+                متجرك شغال ومبيعاتك بتزيد.. <br><span class="gradient-text">حتى وأنت نايم 🚀</span>
+            </h1>
 
             <p class="brand-tagline">
-                نصمّم مواقع ومتاجر إلكترونية سريعة لمشروعك — بربط مباشر مع واتساب و Google Sheets وبدون أي اشتراكات شهرية.
+                ليه تضيع يومك في الرد على "بكام؟" و"المنيو فين؟" في الرسايل؟ بنصمّم موقع ومتجر احترافي لشغلك بربط مباشر مع واتساب و Google Sheets، وبدون أي اشتراكات أو عمولات شهرية.
             </p>
 
-            <div class="trust-pills">
-                <span class="trust-pill">⚡ تسليم سريع (2 - 4 أيام)</span>
-                <span class="trust-pill">📊 ربط Google Sheets</span>
-                <span class="trust-pill">💳 دفعة واحدة فقط</span>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-num">0 ج.م</div>
+                    <div class="metric-lbl">اشتراكات شهرية</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-num">100%</div>
+                    <div class="metric-lbl">طلبات على واتساب</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-num">2 - 4 أيام</div>
+                    <div class="metric-lbl">تسليم سريع جاهز</div>
+                </div>
             </div>
         </header>
 
@@ -451,7 +664,7 @@
             </a>
         </div>
 
-        <!-- النماذج التجريبية الحية -->
+        <!-- ==================== النماذج التجريبية الحية ==================== -->
         <div class="sec-label">
             <span>أمثلة ونماذج تجريبية (جرّبها بنفسك)</span>
             <span>LIVE DEMOS</span>
@@ -463,7 +676,7 @@
                     <div class="demo-icon fashion">👔</div>
                     <div class="demo-info">
                         <h3>MAN Store — متجر أزياء وبراندات</h3>
-                        <p>عرض المنتجات والمقاسات، سلة مشتريات، كوبونات خصم، وربط واتساب و Google Sheets</p>
+                        <p>عرض المنتجات والمقاسات، سلة مشتريات، كوبونات خصم، وربط الطلب بواتساب و Google Sheets</p>
                     </div>
                 </div>
                 <span class="demo-arrow">معاينة تجريبية ↗</span>
@@ -492,70 +705,138 @@
             </a>
         </section>
 
-        <!-- الباقات والأسعار -->
+        <!-- ==================== باقات المواقع الأساسية ==================== -->
         <div class="sec-label">
-            <span>أسعار انطلاق الاستوديو (لفترة محدودة)</span>
+            <span>باقات تصميم المواقع (دفعة واحدة مدى الحياة)</span>
             <span>PRICING</span>
         </div>
 
         <section class="packages-grid">
-            <div class="pkg-card popular">
-                <span class="pkg-tag">الأكثر طلباً للمتاجر والمطاعم</span>
-                <h3>باقة المتجر أو المنيو التفاعلي</h3>
+            <!-- باقة 1: الميني لاندينج بـ 750 جنيه -->
+            <div class="pkg-card">
+                <span class="pkg-badge green">البداية الاقتصادية</span>
+                <div class="pkg-header">
+                    <h3>باقة الميني لاندينج (صفحة واحدة سريعة)</h3>
+                    <p class="pkg-desc">مناسبة للأنشطة الناشئة لعرض المنتجات أو الخدمات الأساسية بدون تعقيد</p>
+                </div>
                 <div class="pkg-price-wrap">
-                    <span class="pkg-price">1,000 ج.م</span>
-                    <span class="pkg-old-price">1,500 ج.م</span>
-                    <small>/ مرة واحدة</small>
+                    <span class="pkg-price">750 ج.م</span>
+                    <span class="pkg-old-price">1,000 ج.م</span>
+                    <small>/ مرة واحدة فقط</small>
                 </div>
                 <ul class="pkg-list">
-                    <li>✓ تصميم كامل باسم وهوية مشروعك</li>
-                    <li>✓ سلة طلبات + نظام كوبونات خصم</li>
-                    <li>✓ استقبال الأوردرات على واتساب + Google Sheets</li>
-                    <li>✓ متوافق 100% مع الموبايل واستضافة سحابية سريعة</li>
+                    <li><span class="check">✓</span> صفحة هبوط واحدة فائقة الخفة والسرعة (بدون أنيميشن معقد)</li>
+                    <li><span class="check">✓</span> عرض من 3 إلى 5 منتجات أو خدمات مع الأسعار والتفاصيل</li>
+                    <li><span class="check">✓</span> زر طلب سريع مباشر يحول العميل لمحادثة الواتساب</li>
+                    <li><span class="check">✓</span> متوافقة 100% مع شاشات الموبايل واستضافة سحابية مجانية</li>
                 </ul>
             </div>
 
+            <!-- باقة 2: المتجر التفاعلي أو المنيو بـ 1000 جنيه -->
+            <div class="pkg-card featured">
+                <span class="pkg-badge blue">الأكثر طلباً ومبيعاً ⭐</span>
+                <div class="pkg-header">
+                    <h3>باقة المتجر التفاعلي أو المنيو</h3>
+                    <p class="pkg-desc">الحل المثالي لبراندات الملابس والمتاجر ومطاعم البرجر والكافيهات</p>
+                </div>
+                <div class="pkg-price-wrap">
+                    <span class="pkg-price">1,000 ج.م</span>
+                    <span class="pkg-old-price">1,500 ج.م</span>
+                    <small>/ مرة واحدة فقط</small>
+                </div>
+                <ul class="pkg-list">
+                    <li><span class="check">✓</span> تصميم كامل بهوية مشروعك وألوان علامتك التجارية</li>
+                    <li><span class="check">✓</span> سلة مشتريات ذكية + نظام تفعيل كوبونات الخصم</li>
+                    <li><span class="check">✓</span> إرسال تفاصيل الأوردر والمقاسات والعنوان جاهزة على الواتساب</li>
+                    <li><span class="check">✓</span> ربط مباشر وتسجيل أوتوماتيكي لكل الأوردرات في Google Sheets</li>
+                </ul>
+            </div>
+
+            <!-- باقة 3: العيادات والمراكز الطبية بـ 1500 جنيه -->
             <div class="pkg-card">
-                <span class="pkg-tag">للعيادات والمراكز الطبية والخدمات</span>
-                <h3>باقة العيادات وحجز المواعيد</h3>
+                <span class="pkg-badge purple">للعيادات والمراكز والخدمات</span>
+                <div class="pkg-header">
+                    <h3>باقة العيادات والمراكز وحجز المواعيد</h3>
+                    <p class="pkg-desc">منصة متكاملة للأطباء والمراكز لتنظيم الحجوزات وتقليل ضغط الاتصالات</p>
+                </div>
                 <div class="pkg-price-wrap">
                     <span class="pkg-price">1,500 ج.م</span>
                     <span class="pkg-old-price">2,200 ج.م</span>
-                    <small>/ مرة واحدة</small>
+                    <small>/ مرة واحدة فقط</small>
                 </div>
                 <ul class="pkg-list">
-                    <li>✓ تصميم طبي راقي مخصص لتخصص العيادة</li>
-                    <li>✓ نظام حجز مواعيد تفاعلي باليوم والساعة</li>
-                    <li>✓ ربط الحجوزات بـ Google Sheets وواتساب العيادة</li>
-                    <li>✓ سهولة تعديل الخدمات والأسعار وقائمة الأطباء</li>
+                    <li><span class="check">✓</span> واجهة طبية احترافية مخصصة لتخصص العيادة وكوادر الأطباء</li>
+                    <li><span class="check">✓</span> نظام حجز كشوفات وجلسات تفاعلي باليوم والميعاد المتاح</li>
+                    <li><span class="check">✓</span> تسجيل فوري لكل بيانات المريض في Google Sheets وواتساب العيادة</li>
+                    <li><span class="check">✓</span> سهولة تامة في تعديل قائمة الأسعار والخدمات ومواعيد العمل</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- ==================== باقات المواسم والتحديثات لبراندات الملابس ==================== -->
+        <section class="season-box">
+            <div class="season-header">
+                <h2>✨ باقات المواسم والتحديثات (Season & Brand Care)</h2>
+                <span class="vip-tag">مخصصة لبراندات الملابس والمتاجر</span>
+            </div>
+            <p class="season-intro">
+                البراند الناجح بيتجدد مع كل موسم! بنقدملك خدمة إدارة وتحديث مظهر متجرك في المناسبات والمواسم الرسمية بدون ما تشيل هم التصميم أو البرمجة.
+            </p>
+
+            <div class="season-grid">
+                <!-- تحديث موسم واحد -->
+                <div class="season-card">
+                    <h4>باقة الموسم الواحد (Season Refresh)</h4>
+                    <div class="season-price">400 ج.م <small>/ للموسم</small></div>
+                    <ul class="season-list">
+                        <li>• تحديث بنرات المتجر حسب الموسم (صيف، شتاء، كريسماس، بلاك فرايداي)</li>
+                        <li>• استبدال حتى 10 منتجات وإضافة الكولكشن الجديد والأسعار</li>
+                        <li>• إضافة ثيم احتفالي للموقع وألوان مخصصة للمناسبة</li>
+                    </ul>
+                </div>
+
+                <!-- اشتراك سنوي VIP -->
+                <div class="season-card vip">
+                    <h4>باقة شريك البراند السنوية (VIP Brand Partner) ⭐</h4>
+                    <div class="season-price">1,200 ج.م <small>/ سنوياً (تغطية 4 مواسم)</small></div>
+                    <ul class="season-list">
+                        <li>• تغطية مواسم السنة كاملة (صيف، شتاء، كريسماس، عيد/رمضان)</li>
+                        <li>• تحديث وتغيير المنتجات والكولكشنات بانتظام على مدار السنة</li>
+                        <li>• أولوية قصوى ودعم فني مستمر لتعديلات الأسعار السريعة</li>
+                    </ul>
+                    <div class="vip-perk">
+                        👑 <strong>ميزة العميل المميز:</strong> خصم <strong>30%</strong> فوري على أي موقع جديد أو تطوير تطلبه خلال فترة اشتراكك!
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- شروط وضمانات الشفافية -->
         <div class="terms-card">
-            <div><strong>🛡️ ما هو متضمن:</strong> استضافة مجانية مدى الحياة على GitHub Pages بدون اشتراك شهري + تعديل واحد مجاني شامل بعد التسليم.</div>
-            <div><strong>ℹ️ الدومين الخاص:</strong> الدومين (.com أو .eg) اختياري تماماً بحسب رغبتك (تكلفته الرسمية حوالي 500 - 600 ج.م سنوياً تدفعها لشركة النطاقات ونربطه مجاناً).</div>
+            <div><strong>🛡️ ما هو متضمن في كافة الباقات:</strong> استضافة سحابية مجانية وسريعة مدى الحياة على خوادم GitHub Pages بدون أي اشتراكات أو تجديدات شهرية + تعديل واحد مجاني شامل بعد التسليم.</div>
+            <div><strong>🌐 بخصوص الدومين الخاص:</strong> جميع الأسعار أعلاه برابط استضافة مجاني وسريع. وفي حال رغبتك في حجز نطاق خاص واحترافي باسم براندك (مثل <code>yourbrand.com</code>)، تضاف التكلفة الرسمية لحجز النطاق حسب الشركة المسجلة (حوالي 12 - 15$ سنوياً) ونقوم بربطه بموقعك مجاناً.</div>
         </div>
 
-        <!-- نموذج طلب سريع -->
+        <!-- ==================== نموذج طلب سريع ==================== -->
         <section id="order-section" class="request-box">
-            <h2>ابدأ موقع مشروعك الآن ⚡</h2>
-            <p>اكتب اسم مشروعك ونشاطه، وهيفتحلك واتساب برسالة منظمة نجهزلك بيها المعاينة والتفاصيل.</p>
+            <h2>ابدأ موقعك أو اشترك في باقاتنا الآن ⚡</h2>
+            <p>اكتب اسم نشاطك واختار الباقة المناسبة، وهيفتحلك واتساب برسالة منظمة نجهزلك بيها المعاينة والتفاصيل فوراً.</p>
             <form class="form-stack" id="quick-lead-form">
                 <input type="text" id="biz-name" class="field" required placeholder="اسم مشروعك / البراند / المطعم / العيادة">
                 <select id="biz-type" class="field" required>
-                    <option value="متجر ملابس / براند أونلاين">متجر ملابس / براند أونلاين (1,000 ج.م)</option>
-                    <option value="مطعم / كافيه (منيو وطلبات)">مطعم / كافيه — منيو تفاعلي (1,000 ج.م)</option>
-                    <option value="عيادة / مركز علاج طبيعي">عيادة / مركز طبي — حجز مواعيد (1,500 ج.م)</option>
-                    <option value="موقع تعريفي لنشاط آخر">موقع تعريفي لنشاط آخر</option>
+                    <option value="باقة الميني لاندينج (750 ج.م)">باقة الميني لاندينج — صفحة واحدة سريعة (750 ج.م)</option>
+                    <option value="باقة المتجر التفاعلي أو المنيو (1,000 ج.م)" selected>باقة المتجر التفاعلي أو المنيو (1,000 ج.م) ⭐</option>
+                    <option value="باقة العيادات والمراكز الطبية (1,500 ج.م)">باقة العيادات والمراكز وحجز المواعيد (1,500 ج.م)</option>
+                    <option value="باقة الموسم الواحد للملابس (400 ج.م)">باقة الموسم الواحد لبراندات الملابس (400 ج.م)</option>
+                    <option value="باقة VIP السنوية للملابس (1,200 ج.م)">باقة VIP السنوية لتحديثات المواسم (1,200 ج.م) 👑</option>
+                    <option value="طلب استشارة أو نشاط آخر">طلب استشارة أو نشاط آخر</option>
                 </select>
                 <button type="submit" class="btn btn-blue">طلب معاينة مجانية عبر واتساب 🚀</button>
             </form>
         </section>
 
         <footer class="footer-note">
-            © 2026 K-Web Studio — استوديو تصميم وتطوير المواقع الذكية في مصر
+            © 2026 K-Web Studio — استوديو تصميم وتطوير المواقع والمتاجر الذكية في مصر
         </footer>
     </div>
 
@@ -568,7 +849,7 @@
 `السلام عليكم K-Web Studio، حابب أطلب معاينة لمشروعي:
 ━━━━━━━━━━━━━━━━━━━━
 🏢 *اسم المشروع:* ${bizName}
-📌 *نوع الموقع المطلوب:* ${bizType}
+📌 *الباقة المطلوبة:* ${bizType}
 ━━━━━━━━━━━━━━━━━━━━
 ممكن نجهز المعاينة ونعرف خطوات البداية؟`;
             window.open("https://wa.me/201011695927?text=" + encodeURIComponent(msg), "_blank");
